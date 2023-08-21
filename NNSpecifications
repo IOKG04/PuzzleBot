@@ -1,0 +1,10 @@
+In-Layer:	782	N/A		Bit board for each piece/color + En Passant bit list + Casteling Abilities + Which turn (1 = White, -1 = Black) + fifty-move clock	64 * 6 * 2 + 8 + 4 + 1 + 1
+
+Layer-1:	1888	Leaky ReLU
+Layer-2:	2994	Leaky ReLU
+
+Out-Layer:	4100	Sigmoid		Every combination of squares + Promotion piece		64 * 64 + 4
+
+I just interpolated between the In- and Out-Layer sizes
+
+Assuming all values are doubles (float64s), the total size of the model would be 783 * 1888 + 1889 * 2994 + 2995 * 4100 * 8 = 105369970 bytes or around 100.5 MiB
