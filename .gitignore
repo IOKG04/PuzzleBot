@@ -3,3 +3,5 @@ __pycache__
 test_bot/__pycache__
 /engines/*
 !/engines/README.md
+training/obj
+training/lichess_db_puzzle.csv
